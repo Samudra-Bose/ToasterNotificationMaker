@@ -10,6 +10,7 @@ notifications.classList.add(
   config.positionX === "right" ? "right" : "left",
   config.positionY === "top" ? "top" : "bottom"
 );
+
 notifications.appendChild(div)
  setTimeout(()=>{
 notifications.removeChild(div);
