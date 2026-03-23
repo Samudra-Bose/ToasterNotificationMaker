@@ -1,3 +1,8 @@
+let select=document.querySelectorAll("select");
+let input=document.querySelectorAll("input");
+let form=document.querySelector("form");
+form.addEventListener("submit",(det)=>{
+  det.preventDefault();
 function createtoaster(config){
  return function(text){
  let div=document.createElement("div");
@@ -10,19 +15,22 @@ notifications.classList.add(
   config.positionX === "right" ? "right" : "left",
   config.positionY === "top" ? "top" : "bottom"
 );
-
 notifications.appendChild(div)
+
+
  setTimeout(()=>{
 notifications.removeChild(div);
  },config.duration*1000);
 
 }
 };
+  let toaster = createtoaster({
+      positionX:select[0].value,
+      positionY:select[1].value,
+      duration:Number(input[0].value),
+  });
+  toaster(input[1].value);
 
-let toaster = createtoaster({
-    positionX:"left",
-    positionY:"top",
-    duration:3,
+  form.reset();
+  console.log(select[0].value);
 });
-toaster("Hello");
-toaster("Hello");
