@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toaster Notifiaction Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="parent">
+    <div class="toasters">
+        <div class="notifications"></div>
+    </div>
+    <div class="inputArea">
+        <form id="toasterForm">
+            <h2>Toaster Config</h2>
+            
+            <label>Position X</label>
+            <select name="positionX">
+                <option value="left">Left</option>
+                <option value="right" selected>Right</option>
+            </select>
+            
+            <label>Position Y</label>
+        <select name="positionY">
+            <option value="top" selected>Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+
+        <label>Duration (seconds)</label>
+        <input type="number" name="duration" value="3" min="1" />
+        
+        <label>Message</label>
+        <input type="text" name="message" placeholder="Enter message..." />
+
+        <button type="submit">Show Toast</button>
+    </form>
+</div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
