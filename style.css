@@ -8,7 +8,7 @@ html{
 }
 
 body{
-    background-color: #000;
+    background-color:  #e6e7ee;
     padding: 1rem;
 }
 .inputArea {
@@ -17,13 +17,27 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     
-    background: #111;
+    /* background: #111; */
     padding: 2rem;
     border-radius: 1rem;
-    width: 29rem;
-height: 32rem;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+    width: 35rem;
+    height: 34rem;
+    /* border: 1px solid rgba(255,255,255,0.1); */
+    background: #e6e7ee;
+    box-shadow:
+    -10px -10px 20px #c5c7d0,
+    10px 10px 20px #ffffff;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform,box-shadow;
+}
+.inputArea:hover {
+  transform: translate(-50%, -50%) translateY(-5px) scale(1.01);
+
+  box-shadow:
+     -15px -15px 28px #c5c7d0,
+9px 9px 14px #ffffff;
+
 }
 
 .inputArea form {
@@ -33,13 +47,13 @@ height: 32rem;
 }
 
 .inputArea h2 {
-    color: #fff;
+    color: #333;
     margin-bottom: 0.5rem;
     text-align: center;
 }
 
 .inputArea label {
-    color: #aaa;
+    color: #888;
     font-size: 0.85rem;
 }
 
@@ -49,8 +63,12 @@ height: 32rem;
     border-radius: 0.5rem;
     border: none;
     outline: none;
-    background: #222;
-    color: #fff;
+    background: #e6e7ee;
+color: #555;
+box-shadow:
+  inset -6px -6px 12px #c5c7d0,
+  inset 6px 6px 12px #ffffff;
+    /* color: #555; */
 }
 
 .inputArea button {
@@ -58,10 +76,33 @@ height: 32rem;
     padding: 0.6rem;
     border-radius: 0.6rem;
     border: none;
-    background: #c9973a;
-    color: black;
+    background: #e6e7ee;
+    /* color: black; */
     cursor: pointer;
     font-weight: 600;
+    margin-top: 3.7rem;
+    box-shadow:
+    6px 6px 12px #c5c7d0,
+    -6px -6px 12px #ffffff;
+    color: #555;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.inputArea button:hover {
+    transform: translateY(-3px);
+    box-shadow: 11px 11px 20px #ffffff,
+    -8px -8px 14px #c5c7d0;
+}
+.inputArea button:active {
+    transform: translateY(-3px) scale(0.99);
+    box-shadow:
+    inset 4px 4px 8px #c5c7d0,
+    inset -4px -4px 8px #ffffff;
+}
+.inputArea button:focus {
+  outline: none;
+  box-shadow:
+    6px 6px 12px #c5c7d0,
+    -6px -6px 12px #ffffff;
 }
 .notifications{
     position: fixed;
@@ -72,15 +113,14 @@ height: 32rem;
 }
 .notification{
     display: inline-block;
-    background-color: #2a2a2a; 
-    color: #ffffff;
+    background-color: #e6e7ee; 
+    color: #333;
     padding: 0.75rem 1.5rem;  
     border-radius: 0.9rem; 
-border: 0.001rem solid rgba(255, 255, 255, 0.15);
+/* border: 0.001rem solid rgba(255, 255, 255, 0.15); */
 box-shadow: 
-  0 0 7px rgba(255, 255, 255, 0.25),
-  0 0 10px rgba(255, 255, 255, 0.15),
-  0 10px 25px rgba(0, 0, 0, 0.8);
+3px 3px 6px #ffffff,
+-3px -3px 7px #c5c7d0;
     pointer-events: none;
     transition: opacity 1.5s ease-in-out;
 
