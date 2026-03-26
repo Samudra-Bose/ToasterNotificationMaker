@@ -1,4 +1,4 @@
-let select=document.querySelectorAll("select");
+let selection=document.querySelectorAll("select");
 let input=document.querySelectorAll("input");
 let form=document.querySelector("form");
 form.addEventListener("submit",(det)=>{
@@ -25,12 +25,12 @@ notifications.removeChild(div);
 }
 };
   let toaster = createtoaster({
-      positionX:select[0].value,
-      positionY:select[1].value,
+      positionX:selection[0].value,
+      positionY:selection[1].value,
       duration:Number(input[0].value),
   });
   toaster(input[1].value);
 
   form.reset();
-  console.log(select[0].value);
+  console.log(selection[0].value);
 });
